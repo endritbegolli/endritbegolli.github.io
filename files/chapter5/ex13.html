@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--example_5_14-->
+<!--Melting one image into another using Css3-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Melting Images</title>
+	<style type="text/css">
+		#cover
+		{
+			position: relative;
+			margin: 0 auto;
+		}
+		#cover img 
+		{
+			position: absolute;
+			left: 0;
+			-webkit-transition:opacity 4s ease-in-out;
+			transition:opacity 4s ease-in-out;
+		}
+		#cover img.top:hover
+		{
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="cover">
+		<img class="bottom" src="sea1.jpg" alt="sea" width="500px">
+		<img class="top" src="sky1.jpg" alt="sky" width="500px">
+	</div>
+</body>
+</html>

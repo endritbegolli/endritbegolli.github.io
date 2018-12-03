@@ -1,0 +1,628 @@
+* {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      vertical-align: baseline;
+      font-size: 100%;
+      cursor: url('../images/cursor3.png') 6 6, default;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+}
+
+html {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      -webkit-scroll-behavior: smooth;
+      -moz-scroll-behavior: smooth;
+}
+
+body {
+      width: 100%;
+      background: #0E0E0E;
+}
+
+
+.logogif img {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      animation: anlogo 0.3s ease-in-out 0s forwards;
+      animation-delay: 2.6s;
+      width: 150px;
+      height: 150px;
+}
+
+@keyframes anlogo {
+      /*0% {
+            opacity: 1;
+            transform: none;
+      }
+      90%{
+            opacity: 0;
+            transform: none;
+      }
+      99%{
+            opacity: 0;
+            transform: none;
+      }
+      100%{
+            opacity: 0;
+            transform: translate(200%, 0);
+      }*/
+      from{
+            visibility: visible;
+      }
+      to{
+            visibility: hidden;
+      }
+}
+
+.loadl {
+      background: #0E0E0E;
+      position: fixed;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 0%;
+      animation: anloadl 1s ease-in-out 0s forwards;
+      animation-delay: 3s;
+      z-index: 999;
+}
+
+.loadr {
+      background: #0E0E0E;
+      position: fixed;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      animation: anloadr 1s ease-in-out 0s forwards;
+      animation-delay: 3s;
+      z-index: 999;
+}
+
+@keyframes anloadl {
+      from {
+            opacity: 1;
+            transform: none;
+      }
+      to {
+            opacity: 1;
+            transform: translate(-100%, 0);
+      }
+}
+
+@keyframes anloadr {
+      from {
+            opacity: 1;
+            transform: none;
+      }
+      to {
+            opacity: 1;
+            transform: translate(100%, 0);
+      }
+}
+
+
+::-webkit-scrollbar {
+      width: 8px;
+      background-color: #0E0E0E;
+}
+
+::-webkit-scrollbar-thumb {
+      background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+      background-color: #2ecc71;
+}
+
+::-webkit-scrollbar-track {
+      background-color: #0E0E0E;
+}
+
+.nav2 {
+	text-align: center;
+	text-transform: uppercase;
+	position: sticky;
+	top: 25px;
+      z-index: 998;
+      animation: annav2 0s ease 6s forwards;
+}
+
+@keyframes annav2 {
+      from {
+            z-index: 998;
+      }
+      to {
+            z-index: 1000;
+      }
+}
+
+a {
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+li {
+	display: inline-block;
+      padding: 0 10px;
+}
+
+li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	padding: 0 10px;
+	position: relative;
+}
+
+.efekti::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+      width: 0px;
+      height: 0px;
+      transition: width .2s ease-in-out;
+      opacity: 0;
+}
+
+
+.efekti::after{
+	content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+	display: block;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+	width: 0px;
+	height: 0px;
+	transition: width .2s ease-in-out;
+      opacity: 0;
+}
+
+.efekti:hover::before {
+      width: 100%;
+      opacity: 1;
+}
+
+.efekti:hover::after {
+	width: 100%;
+      opacity: 1;
+}
+
+.faqja {
+      width: 90%;
+      margin: 0 auto;
+}
+
+.navigimi::after {
+      content: "";
+      clear: both;
+      display: table;
+}
+
+
+h1 {
+      color: #fff;
+      font-size: 48px;
+}
+
+p {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+}
+
+/* navigimi */
+
+nav {
+      height: 70px;
+      line-height: 70px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+}
+
+nav a img {
+      vertical-align: middle;
+      //margin-top: 40px;
+      //margin-left: 20px;
+      width: 60px;
+      height: 60px;
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+nav a i {
+      vertical-align: middle;
+      font-size: 20px;
+      padding: 0 10px;
+      color: #fff;
+      transition: 0.2s ease-in-out;
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+nav a:nth-child(2) {
+      float: right;
+}
+nav a:nth-child(3) {
+      float: right;
+}
+nav a:nth-child(4) {
+      float: right;
+}
+
+nav a:nth-child(5) {
+      float: right;
+}
+
+nav a #facebook:hover{
+	color: #2980b9;
+}
+
+nav a #instagram:hover{
+	color: #e74c3c;
+}
+
+nav a #snapchat:hover{
+	color: #f1c40f;
+}
+
+nav a #email:hover{
+	color: #1abc9c;
+}
+
+/* header */
+
+header {
+      margin: 100px 0 200px 120px;
+}
+
+header img {
+      position: absolute;
+      margin: -95px 670px;
+      width: 400px;
+      height: 400px;
+}
+
+header p {
+      width: 60%;
+      margin-top: 10px;
+}
+
+header p a {
+      text-decoration: none;
+      color: #fff;
+}
+
+.uc {
+      transition: 0.2s ease-in-out;
+}
+
+.uc:hover {
+      border-top: 1px solid;
+      border-right: 1px solid;
+      margin: 0 2px;
+}
+
+/* pjesaskills */
+
+#skills{
+      height: 30px;
+}
+
+.pjesaskills {
+      margin: 100px 0 200px 120px;
+      box-sizing: border-box;
+}
+
+.pjesaskills p {
+      width: 60%;
+      margin-top: 10px;
+}
+
+.skills {
+      width: 90%;
+      background-color: #ecf0f1;
+}
+
+.skill {
+      text-align: right;
+      padding: 10px;
+      color: #ecf0f1;
+}
+
+.html {
+      width: 80%;
+      //height: 10px;
+      //line-height: 50%;
+      background-color: #FF5722;
+}
+
+.css{
+      width: 70%;
+      //height: 10px;
+      //line-height: 50%;
+      background-color: #2196F3;
+}
+
+.js {
+      width: 40%;
+      //height: 10px;
+      //line-height: 50%;
+      background-color: #FFEB3B;
+}
+
+.ps {
+      width: 80%;
+      //height: 10px;
+      //line-height: 50%;
+      background-color: #3F51B5;
+}
+
+/* .pjesa1 */
+
+#project {
+      height: 100px;
+}
+
+.pjesa1 {
+      text-align: center;
+      width: 100%;
+}
+
+.pjesa1 img {
+      margin: 1%;
+      width: 45%;
+}
+
+
+/* header2 */
+
+.header2 {
+      margin: 130px 0 80px 40px;
+}
+
+/* .pjesa2 */
+
+#assgt{
+      height: 0px;
+}
+
+.pjesa2 {
+      width: 100%;
+      text-align: center;
+}
+
+
+.pjesa2 img {
+      margin: 1%;
+      width: 45%;
+}
+
+.pjesa2 a img:hover {
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+
+/* contact form */
+
+#contact {
+      height: 120px;
+}
+
+h2 {
+      color: #fff;
+      font-size: 28px;
+}
+
+.form p {
+      font-size: 15.8px;
+}
+
+.form {
+      position: relative;
+      text-align: center;
+      right: -30%;
+      width: 500px;
+}
+
+input {
+      width: 100%;
+      margin: 20px 0;
+      background: rgba(0,0,0,0); 
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+#msg {
+      margin-top: 60px;
+}
+
+::-webkit-input-placeholder {
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-family: 'Poppins', sans-serif;
+}
+
+button {
+      padding: 10px 17px;
+      font-size: 16px;
+      background: #fff;
+      color: #0E0E0E;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 30px;
+      transition: 0.2s ease-in-out;
+}
+
+button:hover {
+      background: #0E0E0E;
+      color: #fff;
+      //border: 2px solid #fff;
+      box-shadow: 0px 0px 0px 2px;
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+
+/* footer */
+footer p {
+      text-align: center;
+      color: grey;
+      margin: 60px auto;
+}
+
+footer #whitecode {
+      color: #fff;
+}
+
+footer #redheart {
+      color: #e74c3c;
+}
+
+.freskoje {
+	position: fixed;
+      z-index: 1000;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	//background: #8e44ad;
+	bottom: 20px;
+	right: 30px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 22px;
+	transition: 0.2s ease-in-out;
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+.freskoje:hover {
+	background: #8e44ad;
+	color: #0E0E0E;
+}
+
+.kthehu {
+	position: fixed;
+      z-index: 1000;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	//background: #2ecc71;
+	bottom: 80px;
+	right: 30px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 22px;
+	transition: 0.2s ease-in-out;
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+.kthehu:hover {
+	background: #2ecc71;
+	color: #0E0E0E;
+}
+
+.kthehu i, .freskoje i:hover {
+      cursor: url('../images/cursor3fill.png') 6 6, default;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 991px) {
+      header {
+            text-align: left;
+            margin: 100px 0 100px 30px;
+      }
+
+      header img {
+            /*opacity: 0;
+            position: fixed;*/
+            visibility: hidden;
+            position: fixed;
+      }
+
+      .nav2 {
+      	display: inline-block;
+            position: sticky;
+            background: #0E0E0E;
+            margin-top: 50px;
+            top: 0px;
+            font-size: 14px;
+      }
+      .nav2 li {
+            padding-left: 8px;
+            padding-right: 0px;
+      }
+
+      nav {
+            position: sticky;
+            top: 8px;
+      }
+
+      header h1 {
+            font-size: 36px;
+      }
+
+      header p {
+            font-size: 12px;
+            width: 90%;
+      }
+
+      .pjesaskills {
+            text-align: left;
+            margin: 100px 0 100px 30px;
+      }
+
+      .pjesa1 img {
+            margin: 2%;
+            width: 90%;
+      }
+
+      .header2 {
+            margin: 130px 0 40px 12px;
+      }
+
+      .header2 h1 {
+            font-size: 36px;
+      }
+
+      .header2 p {
+            font-size: 12px;
+            width: 90%;
+      }
+
+      .pjesa2 img {
+            margin: 2%;
+      }
+
+      .form {
+            width: 100%;
+            left: 0;
+      }
+
+      .form h2 {
+            font-size: 20px;
+      }
+      
+      .form p {
+            font-size: 13px;
+      }
+}

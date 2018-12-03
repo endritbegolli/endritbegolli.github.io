@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--example_5_9-->
+<!--Reflections in CSS3. -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Reflection</title>
+	<style type="text/css">
+	img {margin: 10px;}
+	img.below {
+		-webkit-box-reflect:below 5px;
+		-webkit-gradient (linear, left top, left bottom, from (transparent), to (white));
+	}
+	img.right {
+		-webkit-box-reflect:right 5px;
+		-webkit-gradient(
+			linear, right top, left top, from(transprent), to(white));
+	}
+	</style>
+</head>
+<body>
+	<img src="beautifulSea3.jpg" class="below" width="138" height="180" alt="Sea">
+	<img src="beautifulSea3.jpg" class="right" width="138" height="180" alt="Sea">
+</body>
+</html>
