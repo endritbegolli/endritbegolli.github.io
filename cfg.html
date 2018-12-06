@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>strex - CS:GO cfg</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" sizes="16px 16px">
+	<link rel="icon" href="favicon.png" type="image/x-icon" sizes="16px 16px">
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			user-select: none;
+		}
+		body {
+			background-color: #EEEEEE;
+		}
+
+		code {
+			font-family: 'Source Code Pro', monospace;
+			font-size: 13px;
+		}
+
+		.code {
+			position: absolute;
+			background-color: #E0E0E0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			/*border: 1px solid #000;*/
+			/*border-radius: 5px;*/
+			width: 50%;
+			overflow: hidden;
+			padding: 20px;
+			font-family: 'Source Code Pro', monospace;
+			transition: 0.2s ease;
+		}
+
+		.code:hover{
+			cursor: pointer;
+			background-color: #D9D9D9;
+		}
+
+		.code::before {
+			content: '';
+			width: 0%;
+			height: 2px;
+			background-color: #23cba7;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: 0.2s ease-in-out;
+		}
+		.code:hover::before{
+			width: 100%;
+		}
+
+		.code::after {
+			content: '';
+			width: 0%;
+			height: 2px;
+			background-color: #23cba7;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transition: 0.2s ease-in-out;
+		}
+		.code:hover::after{
+			width: 100%;
+		}
+
+		h1{
+			font-family: 'Source Code Pro', monospace;
+			position: relative;
+			text-align: center;
+			margin-top: 18%;
+		}
+		/*.button1 {
+			position: absolute;
+			top: calc(50% + 120px);
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}*/
+
+		@media only screen and (max-width: 600px) {
+			h1{
+				font-size: 20px;
+				position: relative;
+				text-align: center;
+				margin-top: 15px;
+			}
+		}
+}
+
+	</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<h1>Just click the box to copy configs!</h1>
+
+<div class="code" onclick="copyToClipboard('#p1')">
+	<code id="p1">bind mouse3 +voicerecord; bind mwheelup "+jump; r_cleardecals"; bind mwheeldown "+jump; r_cleardecals"; bind alt +duck; bind t drop; bind g +spray_menu; viewmodel_fov 68; viewmodel_offset_x 2.5; viewmodel_offset_y 0; viewmodel_offset_z -1.5; viewmodel_presetpos 3; cl_viewmodel_shift_left_amt 0.5; cl_viewmodel_shift_right_amt 0.25; viewmodel_recoil 1; cl_righthand 1; cl_crosshairalpha 255; cl_crosshaircolor 4; cl_crosshairdot 0; cl_crosshairgap -2; cl_crosshairsize 2; cl_crosshairstyle 4; cl_crosshairusealpha 1; cl_crosshairthickness 0; cl_crosshair_drawoutline 0; cl_crosshair_sniper_width 1; cl_crosshairgap_useweaponvalue 0; cl_crosshaircolor_b 128; cl_crosshaircolor_r 128; cl_crosshaircolor_g 0; bind mouse1 "+attack; r_cleardecals"; bind w "+forward; r_cleardecals"; sensivity 2; gameinstructor_enable 0; cl_teamid_overhead_always 1; cl_autowepswitch 0;</code><br/>
+	<!-- <code id="p2">Hi, I'm the 2nd TEXT</code><br/> -->
+</div>
+
+<!-- <button onclick="copyToClipboard('#p2')">Copy TEXT 2</button> -->
+
+
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+</body>
+</html>
